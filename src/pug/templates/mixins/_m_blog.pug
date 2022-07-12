@@ -1,0 +1,27 @@
+
+-
+	let linkItemOne =  [
+		'Upcoming Changes (Live Chat, Less Censorship, More Access)',
+		'New Servers (US Washington DC)',
+		'New Servers (US Denver)',
+		'Open Source: Releasing the PIA iOS Client',
+		'Opera Extension is now available'
+	];
+	let linkItemTwo =  [
+		'The Gift of Privacy',
+		'UK High Court Censors Many Links To Popcorn Time: Useless, Dangerous Gesture',
+		'About the PIA Client Security and VPN Security in General',
+		'A Private Net Is Just As Fundamental A Right As Freedom Of Speech',
+		'Opera Extension is now available'
+	];
+
+mixin card(title, image, ...items)
+	article.blog
+		.blog__top
+			.blog__img
+				img(src=`images/other/${image}`, alt="post")
+			h2.blog__title= title
+		ul.blog__list
+			each item in items
+				li.blog__item
+					a(href="#").blog__link= item
