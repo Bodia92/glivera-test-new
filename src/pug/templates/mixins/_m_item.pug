@@ -1,0 +1,68 @@
+//- дані карточок
+-
+	let data = [
+		{
+			img: 'images/post_item/item1.jpg',
+			title: 'The Internet Cannot be Trusted – Beamsplitters, Backdoors, and Broken Promises',
+			name: 'Derek Zimmer',
+			date: ' | JUL 25, 2018',
+			link: 'Governments, Networking, Open Source, Privacy, Security',
+			comment: '0',
+		},
+		{
+			img: 'images/post_item/item2.jpg',
+			title: 'How to get cheaper flights using a VPN',
+			name: 'Jayson',
+			date: ' |  JUL 24, 2018',
+			link: 'Guides',
+			comment: '0',
+		},
+		{
+			img: 'images/post_item/item3.jpg',
+			title: 'Net Neutrality was repealed, but the fight is far from over',
+			name: 'Chris Miller',
+			date: ' |  JUL 22, 2018',
+			link: 'Governments, Net Neutrality, News',
+			comment: '0',
+		},
+		{
+			img: 'images/post_item/item1.jpg',
+			title: 'The Internet Cannot be Trusted – Beamsplitters, Backdoors, and Broken Promises',
+			name: 'Derek Zimmer',
+			date: ' |  JUL 25, 2018',
+			link: 'Governments, Networking, Open Source, Privacy, Security',
+			comment: '0',
+		},
+		{
+			img: 'images/post_item/item2.jpg',
+			title: 'How to get cheaper flights using a VPN',
+			name: 'Jayson',
+			date: ' |  JUL 24, 2018',
+			link: 'Guides',
+			comment: '0',
+		},
+		{
+			img: 'images/post_item/item3.jpg',
+			title: 'Net Neutrality was repealed, but the fight is far from over',
+			name: 'Chris Miller',
+			date: ' |  JUL 22, 2018',
+			link: 'Governments, Net Neutrality, News',
+			comment: '0',
+		}
+	]
+//- карточка товару
+
+mixin post(data)
+	.post
+		.post__image
+			img(src= data.img, alt="item")
+		.post__wrap
+			h3.post__title= data.title
+			.post__user
+				span.post__name= data.name
+				span.post__name.post__name--color= data.date
+			.post__info
+				a(href="#").post__link= data.link
+			.post__comments
+				span.post__comment= data.comment
+				img(src="images/comment.svg", alt="comment")
