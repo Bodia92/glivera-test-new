@@ -12,7 +12,8 @@ block content_block
 						+post(dataInfo)
 				.main-page__blog
 					form.main-page__form
-						input(type="text" class="main-page__search" placeholder="Search blog")
+						label(for="search")
+							input(id="search" type="text" class="main-page__search" placeholder="Search blog")
 						button(type="submit" class="main-page__submit")
 					+card('Announcements', 'call.svg', ...linkItemOne)
 					+card('Popular posts', 'popular-posts.svg', ...linkItemTwo)
