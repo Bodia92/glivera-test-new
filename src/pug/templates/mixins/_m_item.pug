@@ -57,7 +57,7 @@ mixin post(data)
 		.post__image
 			img(src= data.img, alt="item")
 		.post__wrap
-			h3.post__title= data.title
+			a(href="#").post__title= data.title
 			.post__user
 				span.post__name= data.name
 				span.post__name.post__name--color= data.date
