@@ -3,11 +3,13 @@
 	position: fixed;
 	top: 0;
 	left: 0;
+	padding: 4rem 0;
 
-	height: var(--height-header);
+	height: 10.2rem;
 	width: 100%;
 
-	font-size: 1rem;
+	font-size: 1.4rem;
+	background-color: $body_bg;
 
 	will-change: transform;
 
@@ -15,3 +17,51 @@
 }
 
 //------------------------------------------------------------layout###
+.header__container {
+	max-width: $point_1;
+	margin: 0 auto;
+}
+
+.header__wrapper {
+	display: flex;
+	align-items: center;
+	padding: 2rem 3.2rem;
+	background-color: $header_bg;
+	border-radius: 4px;
+}
+.header__title {
+	align-self: start;
+	font-weight: 900;
+	&:not(:last-child) {
+		margin: 0 4rem 0 0;
+	}
+}
+.header__lists {
+	flex: 1 1 auto;
+}
+
+.header__list {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	column-gap: 3rem;
+}
+.header__link {
+	font-weight: 500;
+	line-height: 1.29;
+	letter-spacing: 0.8px;
+	color: $color_link_base;
+	text-transform: uppercase;
+}
+
+.header__info {
+	align-self: start;
+	font-weight: 500;
+	line-height: 1.29;
+	letter-spacing: 1px;
+	color: $grey;
+	text-transform: uppercase;
+	&:not(:last-child) {
+		margin: 0 4rem 0 0;
+	}
+}

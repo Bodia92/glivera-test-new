@@ -1,2 +1,15 @@
+-
+	let linkHeader = [ 'bitcoin', 'bittorrent', 'irc',' news', 'privacy', 'programming',' security'];
+
 mixin header
 	header.header
+		.header__container
+			.header__wrapper
+				.header__title TAGS:
+				nav.header__lists
+					ul.header__list
+						each link in linkHeader
+							li.header__item
+								a(href="#").header__link= link
+				a(href="#").header__info team
+				a(href="#").header__info contact
