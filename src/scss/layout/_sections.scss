@@ -32,23 +32,30 @@
 	padding: 4rem 0;
 }
 
-.main-page__container {
-	max-width: $point_1;
-	margin: 0 auto;
+.main-page__section {
+	padding: 0 2rem;
 }
 
-.main-page__wrapper {
-	display: flex;
+.main-page__container {
+	@media (min-width: $point_3) {
+		display: flex;
+		max-width: $point_1;
+		margin: 0 auto;
+	}
 }
 .main-page__post {
-	display: grid;
-	row-gap: 3rem;
-	padding: 0 6rem 0 0;
+	@media (min-width: $point_4) {
+		display: grid;
+		row-gap: 3rem;
+		padding: 0 6rem 0 0;
+	}
 }
 .main-page__blog {
-	flex: 0 0 40rem;
-	padding: 0 0 0 6rem;
-	border-left: 1px solid #ebeced;
+	@media (min-width: $point_3) {
+		flex: 0 0 40rem;
+		padding: 0 0 0 6rem;
+		border-left: 1px solid #ebeced;
+	}
 }
 
 .main-page__title {
