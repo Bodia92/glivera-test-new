@@ -3,23 +3,4 @@ extends ../layout/_layout
 block vars
 	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Index', template_name: 'IndexPage'}
 block content_block
-	main.main-page
-		section.main-page__section
-			.main-page__container
-				.main-page__post
-					h1.main-page__title Recent posts
-					each dataInfo in data
-						+post(dataInfo)
-				.main-page__blog
-					form.main-page__form
-						label(for="search")
-							input(id="search" type="text" class="main-page__search" placeholder="Search blog")
-						button(type="submit" class="main-page__submit")
-					+card('Announcements', 'call.svg', ...linkItemOne)
-					+card('Popular posts', 'popular-posts.svg', ...linkItemTwo)
-					.main-page__img
-						img(src="images/other/posts-image.jpg", alt="image")
-					.tag-cloud
-						h4.tag-cloud__title Tag cloud
-						.tag-cloud__img
-							img(src="images/other/posts-link.jpg", alt="image")
+	include ../blocks/section_blog
