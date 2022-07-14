@@ -15,13 +15,13 @@
 		'Opera Extension is now available'
 	];
 
-mixin card(title, image, ...items)
-	article.blog
-		.blog__top
-			.blog__img
+mixin posts_list(title, image, ...items)
+	.posts_list
+		.posts_list__top
+			.posts_list__img
 				img(src=`images/other/${image}`, alt="post")
-			h2.blog__title= title
-		ul.blog__list
+			.posts_list__title= title
+		ul.posts_list__list
 			each item in items
-				li.blog__item
-					a(href="#").blog__link= item
+				li.posts_list__item
+					a(href="#").posts_list__link= item

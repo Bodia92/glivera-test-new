@@ -3,14 +3,14 @@ section.main-page__section
 			.main-page__post
 				h1.main-page__title Recent posts
 				each dataInfo in data
-					+post(dataInfo)
+					+posts_list(dataInfo)
 			.main-page__blog
 				form.main-page__form
 					label(for="search")
 						input(id="search" type="search" class="main-page__search" placeholder="Search blog")
 					button(type="submit"  aria-label='Search' class="main-page__submit")
-				+card('Announcements', 'call.svg', ...linkItemOne)
-				+card('Popular posts', 'popular-posts.svg', ...linkItemTwo)
+				+posts_list('Announcements', 'call.svg', ...linkItemOne)
+				+posts_list('Popular posts', 'popular-posts.svg', ...linkItemTwo)
 				.main-page__img
 					img(src="images/other/posts-image.jpg", alt="image")
 				.tag-cloud
