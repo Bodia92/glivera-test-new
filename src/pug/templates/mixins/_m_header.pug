@@ -1,15 +1,39 @@
 -
-	let linkHeader = [ 'bitcoin', 'bittorrent', 'irc',' news', 'privacy', 'programming',' security'];
+	linkHeader = [
+		{
+			title:'bitcoin',
+		},
+		{
+			title:'bittorrent',
+		},
+		{
+			title:'irc',
+		},
+		{
+			title:'news',
+		},
+		{
+			title:'privacy',
+		},
+		{
+			title:'programming',
+		},
+		{
+			title:' security',
+		},
+	]
 
 mixin header
 	header.header
 		.header__container
-			.header__wrapper
-				.header__title TAGS:
-				nav.header__lists
-					ul.header__list
-						each link in linkHeader
-							li.header__item
-								a(href="#").header__link= link
-				a(href="#").header__info team
-				a(href="#").header__info contact
+			.header__body
+				.header_tags
+					.header_tags__title TAGS:
+					nav.header_tags__lists
+						ul.header_tags__list
+							each link in linkHeader
+								li.header_tags__item
+									a(href="#").header_tags__link= link.title
+				.header_info
+					a(href="#").header_info__link team
+					a(href="#").header_info__link contact
