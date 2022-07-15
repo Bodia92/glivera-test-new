@@ -1,19 +1,23 @@
-section.main-page__section
-		.main-page__container
-			.main-page__post
-				h1.main-page__title Recent posts
+section.section_blog
+	.section_blog__container
+		.post
+			h1.post__title Recent posts
+			ul.post__list
 				each dataInfo in data
-					+post(dataInfo)
-			.main-page__blog
-				form.main-page__form
-					label(for="search")
-						input(id="search" type="search" class="main-page__search" placeholder="Search blog")
-					button(type="submit"  aria-label='Search' class="main-page__submit")
-				+posts_list('Announcements', 'call.svg', ...linkItemOne)
-				+posts_list('Popular posts', 'popular-posts.svg', ...linkItemTwo)
-				.main-page__img
-					img(src="images/other/posts-image.jpg", alt="image")
-				.tag-cloud
-					h4.tag-cloud__title Tag cloud
-					.tag-cloud__img
+					li.post__list_item
+						+post_card(dataInfo)
+		aside.blog
+			form.form_blog
+				label(for="search")
+					input(id="search" type="search" class="form_blog__search" placeholder="Search blog")
+				button(type="submit"  aria-label='Search' class="form_blog__submit")
+			+posts_list('Announcements', 'call.svg', ...linkItemOne)
+			+posts_list('Popular posts', 'popular-posts.svg', ...linkItemTwo)
+			.blog__img
+				img(src="images/other/posts-image.jpg", alt="image")
+			.tag_cloud
+				h4.tag_cloud__title Tag cloud
+				.tag_cloud__img
+					img(src="images/other/posts-link.jpg", alt="image")
+					picture()
 						img(src="images/other/posts-link.jpg", alt="image")

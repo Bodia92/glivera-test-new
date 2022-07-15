@@ -6,11 +6,11 @@
 	@extend %form_el_default;
 }
 
-.main-page__form {
+.form_blog {
 	position: relative;
 	margin: 0 0 5.4rem;
 }
-.main-page__search {
+.form_blog__search {
 	width: 100%;
 	padding: 1.6rem 1rem 1.6rem 5.8rem;
 	border-radius: 0.5rem;
@@ -23,7 +23,7 @@
 		color: rgba(34, 37, 46, 0.8);
 	}
 }
-.main-page__submit {
+.form_blog__submit {
 	position: absolute;
 	width: 2.5rem;
 	height: 2.5rem;

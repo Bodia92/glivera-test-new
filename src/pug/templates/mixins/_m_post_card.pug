@@ -52,17 +52,17 @@
 	]
 //- карточка товару
 
-mixin post(data)
-	.post
-		.post__image
+mixin post_card(data)
+	.post_card
+		.post_card__image
 			img(src= data.img, alt="item")
-		.post__wrap
-			a(href="#").post__title= data.title
-			.post__user
-				span.post__name= data.name
-				span.post__name.post__name--color= data.date
-			.post__info
-				a(href="#").post__link= data.link
-			.post__comments
-				span.post__comment= data.comment
+		.post_card__wrap
+			a(href="#").post_card__title= data.title
+			.post_card__user
+				a(href="#").post_card__name= data.name
+				span.post_card__name.post_card__name--color= data.date
+			.post_card__info
+				a(href="#").post_card__link= data.link
+			a(href="#").post_card__comments
+				span.post_card__comment= data.comment
 				img(src="images/comment.svg", alt="comment")
