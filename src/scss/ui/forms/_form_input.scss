@@ -5,12 +5,13 @@
 .form_input__element {
 	@extend %form_el_default;
 }
+//=====post form======================
 
-.form_blog {
+.post__form {
 	position: relative;
 	margin: 0 0 5.4rem;
 }
-.form_blog__search {
+.post__form_search {
 	width: 100%;
 	padding: 1.6rem 1rem 1.6rem 5.8rem;
 	border-radius: 0.5rem;
@@ -23,7 +24,7 @@
 		color: rgba(34, 37, 46, 0.8);
 	}
 }
-.form_blog__submit {
+.post__form_submit {
 	position: absolute;
 	width: 2.5rem;
 	height: 2.5rem;

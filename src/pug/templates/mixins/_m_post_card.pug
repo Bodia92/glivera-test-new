@@ -2,7 +2,7 @@
 -
 	let data = [
 		{
-			img: 'images/post_item/item1.jpg',
+			img: 'post_item/item1.jpg',
 			title: 'The Internet Cannot be Trusted – Beamsplitters, Backdoors, and Broken Promises',
 			name: 'Derek Zimmer',
 			date: ' | JUL 25, 2018',
@@ -10,7 +10,7 @@
 			comment: '0',
 		},
 		{
-			img: 'images/post_item/item2.jpg',
+			img: 'post_item/item2.jpg',
 			title: 'How to get cheaper flights using a VPN',
 			name: 'Jayson',
 			date: ' |  JUL 24, 2018',
@@ -18,7 +18,7 @@
 			comment: '0',
 		},
 		{
-			img: 'images/post_item/item3.jpg',
+			img: 'post_item/item3.jpg',
 			title: 'Net Neutrality was repealed, but the fight is far from over',
 			name: 'Chris Miller',
 			date: ' |  JUL 22, 2018',
@@ -26,7 +26,7 @@
 			comment: '0',
 		},
 		{
-			img: 'images/post_item/item1.jpg',
+			img: 'post_item/item1.jpg',
 			title: 'The Internet Cannot be Trusted – Beamsplitters, Backdoors, and Broken Promises',
 			name: 'Derek Zimmer',
 			date: ' |  JUL 25, 2018',
@@ -34,7 +34,7 @@
 			comment: '0',
 		},
 		{
-			img: 'images/post_item/item2.jpg',
+			img: 'post_item/item2.jpg',
 			title: 'How to get cheaper flights using a VPN',
 			name: 'Jayson',
 			date: ' |  JUL 24, 2018',
@@ -42,7 +42,7 @@
 			comment: '0',
 		},
 		{
-			img: 'images/post_item/item3.jpg',
+			img: 'post_item/item3.jpg',
 			title: 'Net Neutrality was repealed, but the fight is far from over',
 			name: 'Chris Miller',
 			date: ' |  JUL 22, 2018',
@@ -55,7 +55,12 @@
 mixin post_card(data)
 	.post_card
 		.post_card__image
-			img(src= data.img, alt="item")
+			+picture({
+				img: data.img,
+				class: 'post_card__image_in',
+				img_class: 'post_card__image_img',
+				alt: 'Item image',
+			})
 		.post_card__wrap
 			a(href="#").post_card__title= data.title
 			.post_card__user
@@ -63,6 +68,6 @@ mixin post_card(data)
 				span.post_card__name.post_card__name--color= data.date
 			.post_card__info
 				a(href="#").post_card__link= data.link
-			a(href="#").post_card__comments
-				span.post_card__comment= data.comment
-				img(src="images/comment.svg", alt="comment")
+			a(href="#").post_card__comment
+				span.post_card__comment_number= data.comment
+				img.post_card__comment_img(src="images/other/comment.svg", alt="comment")

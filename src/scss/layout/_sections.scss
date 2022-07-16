@@ -26,31 +26,28 @@
 	margin: 0 auto;
 }
 
+.index_page__container {
+	max-width: $point_1;
+	margin: 0 auto;
+}
 //=================Головний блок====
 
-.main-page {
-	padding: 4rem 0;
-}
-
-.section_blog {
-	padding: 0 2rem;
-}
-
-.section_blog__container {
-	@media (min-width: $point_3) {
-		display: flex;
-		max-width: $point_1;
-		margin: 0 auto;
-	}
-}
-
-//=======block POST
 .post {
 	@media (min-width: $point_4) {
 		display: grid;
 		row-gap: 3rem;
 		padding: 0 6rem 0 0;
 	}
+}
+
+.post__main {
+	@media (min-width: $point_3) {
+		display: flex;
+	}
+}
+
+.post__content {
+	padding: 0 4rem 0 0;
 }
 
 .post__title {
@@ -79,39 +76,35 @@
 	}
 }
 
-//=======block BLOG
-.blog {
+//=======block post__sidebar
+.post__sidebar {
 	@media (min-width: $point_3) {
 		flex: 0 0 40rem;
 		padding: 0 0 0 6rem;
 		border-left: 1px solid #ebeced;
 	}
 }
-.blog__img {
-	position: relative;
+.blog__banner {
 	width: 34rem;
-	height: 45.4rem;
 	&:not(:last-child) {
 		margin-bottom: 5.2rem;
 	}
-	img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		left: 0;
-		object-fit: cover;
-	}
+}
+.blog__banner_image_img {
+	object-fit: cover;
 }
 
-.tag_cloud__title {
+.post__tags_title {
 	font-size: 2.4rem;
 	font-weight: 300;
 	line-height: 1.42;
 	color: #22252e;
 }
 
-.tag_cloud__img {
+.post__tags_image {
 	width: 32.4rem;
-	height: 31rem;
+}
+
+.post__tags_image_img {
+	object-fit: cover;
 }
