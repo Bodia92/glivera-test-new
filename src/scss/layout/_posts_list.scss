@@ -4,7 +4,7 @@
 	}
 }
 
-.posts_list__top {
+.posts_list__body {
 	display: flex;
 	align-items: center;
 	margin: 0 0 0 5px;
@@ -13,11 +13,20 @@
 	}
 }
 
-.posts_list__img {
+.posts_list__heading {
+	display: flex;
+	align-items: center;
 	margin: 0 3rem 0 0;
 }
 
-.posts_list__title {
+.posts_list__heading_icon {
+	height: 4rem;
+	width: 4rem;
+	&:not(:last-child) {
+		margin: 0 3rem 0 0;
+	}
+}
+.posts_list__heading_title {
 	font-size: 2.4rem;
 	font-weight: 300;
 	line-height: 1.42;

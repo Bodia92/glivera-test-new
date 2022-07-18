@@ -15,13 +15,14 @@
 		'Opera Extension is now available'
 	];
 
-mixin posts_list(title, image, ...items)
+mixin posts_list(title, icon, ...items)
 	.posts_list
-		.posts_list__top
-			.posts_list__img
-				img(src=`images/other/${image}`, alt="post")
-			.posts_list__title= title
+		.posts_list__body
+			a.posts_list__heading(href='#' call)
+				span.posts_list__heading_icon
+					+icon(`${icon}`, 'icon--size_mod')
+				span.posts_list__heading_title= title
 		ul.posts_list__list
 			each item in items
 				li.posts_list__item
-					a(href="#").posts_list__link= item
+					a.posts_list__link(href="#")= item

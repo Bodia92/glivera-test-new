@@ -1,8 +1,18 @@
 .post_card {
+	transition: transform 0.3s ease 0s;
 	@media (min-width: $point_4) {
 		display: flex;
 		column-gap: 4rem;
 		padding: 0 0 3rem 0;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			transform: scale(1.02);
+			.post_card__title {
+				color: $color_link_base;
+				text-decoration: none;
+			}
+		}
 	}
 }
 
@@ -38,12 +48,6 @@
 	transition: color 0.3s ease 0s;
 	&:not(:last-child) {
 		margin-bottom: 1rem;
-	}
-	@media (any-hover: hover) {
-		&:hover {
-			color: #889099;
-			text-decoration: none;
-		}
 	}
 }
 .post_card__user {

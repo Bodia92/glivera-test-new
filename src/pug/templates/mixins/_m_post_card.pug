@@ -54,20 +54,20 @@
 
 mixin post_card(data)
 	.post_card
-		.post_card__image
-			+picture({
-				img: data.img,
-				class: 'post_card__image_in',
-				img_class: 'post_card__image_img',
-				alt: 'Item image',
-			})
-		.post_card__wrap
-			a(href="#").post_card__title= data.title
-			.post_card__user
-				a(href="#").post_card__name= data.name
-				span.post_card__name.post_card__name--color= data.date
-			.post_card__info
-				a(href="#").post_card__link= data.link
-			a(href="#").post_card__comment
-				span.post_card__comment_number= data.comment
-				img.post_card__comment_img(src="images/other/comment.svg", alt="comment")
+			a.post_card__image(href="#")
+				+picture({
+					img: data.img,
+					class: 'post_card__image_in',
+					img_class: 'post_card__image_img',
+					alt: 'Item image',
+				})
+			.post_card__wrap
+				a(href="#").post_card__title= data.title
+				.post_card__user
+					a(href="#").post_card__name= data.name
+					span.post_card__name.post_card__name--color= data.date
+				.post_card__info
+					a(href="#").post_card__link= data.link
+				a(href="#").post_card__comment
+					span.post_card__comment_number= data.comment
+					img.post_card__comment_img(src="images/other/comment.svg", alt="comment")
