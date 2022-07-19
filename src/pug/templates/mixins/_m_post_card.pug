@@ -46,7 +46,7 @@
 			title: 'Net Neutrality was repealed, but the fight is far from over',
 			name: 'Chris Miller',
 			date: ' |  JUL 22, 2018',
-			link: 'Governments, Net Neutrality, News',
+			link:'Governments, Net Neutrality, News',
 			comment: '0',
 		}
 	]
@@ -61,13 +61,14 @@ mixin post_card(data)
 					img_class: 'post_card__image_img',
 					alt: 'Item image',
 				})
-			.post_card__wrap
+			.post_card__wrapper
 				a(href="#").post_card__title= data.title
 				.post_card__user
-					a(href="#").post_card__name= data.name
-					span.post_card__name.post_card__name--color= data.date
-				.post_card__info
-					a(href="#").post_card__link= data.link
+					a(href="#").post_card__user_name= data.name
+					span.post_card__user_date.post_card__user_date--color= data.date
+				ul.post_card__list
+					li.post_card__list_item
+						a(href="#").post_card__list_link= data.link
 				a(href="#").post_card__comment
 					span.post_card__comment_number= data.comment
 					img.post_card__comment_img(src="images/other/comment.svg", alt="comment")
