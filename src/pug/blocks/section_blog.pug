@@ -12,8 +12,8 @@ section.section.post
 				label(for="search")
 					input(id="search" type="search" class="post__form_search" placeholder="Search blog")
 				button(type="submit"  aria-label='Search' class="post__form_submit")
-			+posts_list('Announcements', 'call', ...linkItemOne)
-			+posts_list('Popular posts', 'posts', ...linkItemTwo)
+			each list in dataList
+				+posts_list(list)
 			.blog__banner
 				+picture({
 						img: 'other/posts-image.jpg',

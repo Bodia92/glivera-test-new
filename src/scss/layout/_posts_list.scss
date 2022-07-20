@@ -45,6 +45,7 @@
 	font-size: 1.4rem;
 	line-height: 1.57;
 	color: #323642;
+	transition: color 0.3s ease 0s;
 	&::before {
 		content: "";
 		flex: 0 0 4px;
@@ -53,5 +54,10 @@
 		margin: 8px 0 0 0;
 		border-radius: 50%;
 		background-color: $color_link_base;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			color: $green;
+		}
 	}
 }
