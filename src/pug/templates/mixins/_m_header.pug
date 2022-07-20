@@ -35,5 +35,5 @@ mixin header
 								li.header_tags__item
 									a(href="#").header_tags__link= link.title
 				.header_info
-					a(href="#").header_info__link team
-					a(href="#").header_info__link contact
+					each linkHeader in ['team','contact']
+						a.header_info__link(href="#")= linkHeader

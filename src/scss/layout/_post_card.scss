@@ -81,7 +81,7 @@
 		margin: 0 1rem 0 0;
 		&::after {
 			content: ",";
-			color: #1e6a1b;
+			color: $green;
 		}
 	}
 }
@@ -94,7 +94,7 @@
 
 	@media (any-hover: hover) {
 		&:hover {
-			color: #1e6a1b;
+			color: $green;
 		}
 	}
 }

@@ -1,7 +1,7 @@
 //---------------------------------------------sections
 .section {
 	position: relative;
-
+	padding: 0 1.5rem;
 	width: 100%;
 
 	font-size: 1rem;
@@ -33,21 +33,16 @@
 //=================Головний блок====
 
 .post {
-	@media (min-width: $point_4) {
-		display: grid;
-		row-gap: 3rem;
-		padding: 0 6rem 0 0;
-	}
 }
 
 .post__main {
+	padding-top: 4rem;
 	@media (min-width: $point_3) {
 		display: flex;
 	}
 }
 
 .post__content {
-	padding: 0 4rem 0 0;
 }
 
 .post__title {
@@ -80,7 +75,7 @@
 			background-color: rgba(242, 242, 242, 0.2);
 			&::before {
 				height: 2px;
-				background-color: #46bd42;
+				background-color: $green;
 			}
 		}
 	}
