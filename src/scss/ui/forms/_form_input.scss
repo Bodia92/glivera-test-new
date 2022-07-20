@@ -9,7 +9,7 @@
 
 .post__form {
 	position: relative;
-	margin: 0 0 5.4rem;
+	margin: 0 0 5.4rem 0;
 }
 .post__form_search {
 	width: 100%;
@@ -31,6 +31,5 @@
 	top: 50%;
 	left: 2rem;
 	transform: translate(0, -50%);
-	background: url("../images/other/search.svg") 0 0 no-repeat;
 	cursor: pointer;
 }

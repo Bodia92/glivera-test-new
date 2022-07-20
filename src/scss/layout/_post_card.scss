@@ -90,11 +90,12 @@
 	line-height: 1.33;
 	letter-spacing: 0.5px;
 	text-transform: uppercase;
-	transition: color 0.3s ease 0s;
+	transition: color 0.3s ease 0s, text-shadow 0.3s ease 0s;
 
 	@media (any-hover: hover) {
 		&:hover {
-			color: $green;
+			color: #11390f;
+			text-shadow: 0px 1px #11390f;
 		}
 	}
 }
@@ -107,4 +108,9 @@
 	font-size: 1.4rem;
 	line-height: 1.57;
 	color: #889099;
+}
+
+.post_card__comment_icon {
+	width: 11.2px;
+	height: 10.6px;
 }

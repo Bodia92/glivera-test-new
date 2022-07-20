@@ -94,6 +94,7 @@ mixin post_card(data)
 					each links in data.link
 						li.post_card__list_item
 							a.post_card__list_link(href="#")= links
-				a.post_card__comment(href="#")
+				a.post_card__comment(href="#" comment)
 					span.post_card__comment_number= data.comment
-					img.post_card__comment_img(src="images/other/comment.svg", alt="comment")
+					span.post_card__comment_icon
+						+icon( 'comment', 'icon--size_mod')

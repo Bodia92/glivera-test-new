@@ -43,6 +43,9 @@
 }
 
 .post__content {
+	&:not(:last-child) {
+		padding: 0 6rem 0 0;
+	}
 }
 
 .post__title {
@@ -106,10 +109,12 @@
 	color: #22252e;
 }
 
-.post__tags_image {
+.post__tags_image,
+.blog__banner {
 	width: 32.4rem;
 }
 
-.post__tags_image_img {
+.post__tags_image_img,
+.blog__banner_image_img {
 	object-fit: cover;
 }
