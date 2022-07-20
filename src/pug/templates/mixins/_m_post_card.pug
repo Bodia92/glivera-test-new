@@ -6,7 +6,13 @@
 			title: 'The Internet Cannot be Trusted – Beamsplitters, Backdoors, and Broken Promises',
 			name: 'Derek Zimmer',
 			date: ' | JUL 25, 2018',
-			link: 'Governments, Networking, Open Source, Privacy, Security',
+			link: [
+							'Governments',
+							'Networking',
+							'Open Source',
+							'Privacy',
+							'Security'
+						],
 			comment: '0',
 		},
 		{
@@ -14,7 +20,9 @@
 			title: 'How to get cheaper flights using a VPN',
 			name: 'Jayson',
 			date: ' |  JUL 24, 2018',
-			link: 'Guides',
+			link: [
+							'Guides'
+						],
 			comment: '0',
 		},
 		{
@@ -22,7 +30,11 @@
 			title: 'Net Neutrality was repealed, but the fight is far from over',
 			name: 'Chris Miller',
 			date: ' |  JUL 22, 2018',
-			link: 'Governments, Net Neutrality, News',
+			link: [
+							'Governments',
+							'Net Neutrality' ,
+							'News'
+						],
 			comment: '0',
 		},
 		{
@@ -30,7 +42,13 @@
 			title: 'The Internet Cannot be Trusted – Beamsplitters, Backdoors, and Broken Promises',
 			name: 'Derek Zimmer',
 			date: ' |  JUL 25, 2018',
-			link: 'Governments, Networking, Open Source, Privacy, Security',
+			link: [
+							'Governments',
+							'Networking',
+							'Open Source',
+							'Privacy',
+							'Security'
+						],
 			comment: '0',
 		},
 		{
@@ -38,7 +56,9 @@
 			title: 'How to get cheaper flights using a VPN',
 			name: 'Jayson',
 			date: ' |  JUL 24, 2018',
-			link: 'Guides',
+			link: [
+							'Guides'
+						],
 			comment: '0',
 		},
 		{
@@ -46,7 +66,11 @@
 			title: 'Net Neutrality was repealed, but the fight is far from over',
 			name: 'Chris Miller',
 			date: ' |  JUL 22, 2018',
-			link:'Governments, Net Neutrality, News',
+			link: [
+							'Governments',
+							'Net Neutrality' ,
+							'News'
+						],
 			comment: '0',
 		}
 	]
@@ -62,13 +86,14 @@ mixin post_card(data)
 					alt: 'Item image',
 				})
 			.post_card__wrapper
-				a(href="#").post_card__title= data.title
+				a.post_card__title(href="#")= data.title
 				.post_card__user
-					a(href="#").post_card__user_name= data.name
+					a.post_card__user_name(href="#")= data.name
 					span.post_card__user_date.post_card__user_date--color= data.date
 				ul.post_card__list
-					li.post_card__list_item
-						a(href="#").post_card__list_link= data.link
-				a(href="#").post_card__comment
+					each links in data.link
+						li.post_card__list_item
+							a.post_card__list_link(href="#")= links
+				a.post_card__comment(href="#")
 					span.post_card__comment_number= data.comment
 					img.post_card__comment_img(src="images/other/comment.svg", alt="comment")

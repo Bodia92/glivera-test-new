@@ -1,18 +1,9 @@
 .post_card {
-	transition: transform 0.3s ease 0s;
+	transition: box-shadow 0.3s ease 0s;
 	@media (min-width: $point_4) {
 		display: flex;
 		column-gap: 4rem;
 		padding: 0 0 3rem 0;
-	}
-	@media (any-hover: hover) {
-		&:hover {
-			transform: scale(1.02);
-			.post_card__title {
-				color: $color_link_base;
-				text-decoration: none;
-			}
-		}
 	}
 }
 
@@ -49,6 +40,12 @@
 	&:not(:last-child) {
 		margin-bottom: 1rem;
 	}
+	@media (any-hover: hover) {
+		&:hover {
+			color: $color_link_base;
+			text-decoration: none;
+		}
+	}
 }
 .post_card__user {
 	font-size: 1.4rem;
@@ -72,8 +69,20 @@
 }
 
 .post_card__list {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
 	&:not(:last-child) {
 		margin-bottom: 1.8rem;
+	}
+}
+.post_card__list_item {
+	&:not(:last-child) {
+		margin: 0 1rem 0 0;
+		&::after {
+			content: ",";
+			color: #1e6a1b;
+		}
 	}
 }
 .post_card__list_link {
@@ -81,6 +90,13 @@
 	line-height: 1.33;
 	letter-spacing: 0.5px;
 	text-transform: uppercase;
+	transition: color 0.3s ease 0s;
+
+	@media (any-hover: hover) {
+		&:hover {
+			color: #1e6a1b;
+		}
+	}
 }
 .post_card__comment {
 	display: flex;
@@ -91,33 +107,4 @@
 	font-size: 1.4rem;
 	line-height: 1.57;
 	color: #889099;
-}
-
-//=========post buttom
-
-.post__bottom {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-	margin: 0 auto;
-	padding: 11px 0 10px;
-	border-radius: 30px;
-	max-width: 26rem;
-	border: solid 1px #4cb649;
-	text-align: center;
-	font-size: 1.4rem;
-	font-weight: 500;
-	line-height: 1.29;
-	letter-spacing: 0.8px;
-	text-transform: uppercase;
-	color: #4cb649;
-	cursor: pointer;
-	transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
-	@media (any-hover: hover) {
-		&:hover {
-			background-color: #4cb649;
-			color: #fff;
-		}
-	}
 }
