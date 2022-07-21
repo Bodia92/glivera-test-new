@@ -10,8 +10,13 @@ section.section.post
 				button.post__botton(type='button') older posts
 			aside.post__sidebar
 				form.post__form
-					label(for="search")
-						input(id="search" type="search" class="post__form_search" placeholder="Search blog")
+					+form_input({
+						type: 'search',
+						label: '',
+						placeholder: 'Search blog',
+						value: '',
+						id: 'search',
+					})
 					button.post__form_submit(type="submit"  aria-label='Search')
 						+icon( 'search', 'icon--size_mod')
 				each list in dataList

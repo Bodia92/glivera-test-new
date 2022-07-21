@@ -45,12 +45,12 @@ $point_8: 320px;
 //---------------------------------------------media points
 
 //---------------------------------------------forms
-$input_height: 4rem;
-$input_offset: 0 2rem;
-$input_font_size: $font_size_base;
-$input_border_color: #ccc;
+$input_height: 6rem;
+$input_offset: 1.6rem 1rem 1.6rem 5.8rem;
+$input_font_size: 1.8rem;
+$input_border_color: #d7d8d9;
 $input_border_color_active: $black;
-$input_placeholder_color: rgba($black, 0.4);
+$input_placeholder_color: rgba(34, 37, 46, 0.8);
 $input_text_color: $black;
 $input_radius: $gl_radius;
 //---------------------------------------------forms###
