@@ -50,21 +50,22 @@
 .post_card__user {
 	font-size: 1.4rem;
 	line-height: 1.57;
-	color: $grey;
 	&:not(:last-child) {
 		margin-bottom: 1rem;
 	}
 }
 .post_card__user_name {
-	color: inherit;
+	color: $grey;
 	&:not(:last-child) {
-		margin-bottom: 1.2rem;
+		margin: 0 0.6rem 1.2rem 0;
 	}
 }
 
 .post_card__user_date {
-	&--color {
-		color: #889099;
+	color: #889099;
+	&::before {
+		content: "|";
+		padding: 0 0.4rem 0 0;
 	}
 }
 

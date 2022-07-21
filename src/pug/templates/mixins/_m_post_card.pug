@@ -5,7 +5,7 @@
 			img: 'post_item/item1.jpg',
 			title: 'The Internet Cannot be Trusted – Beamsplitters, Backdoors, and Broken Promises',
 			name: 'Derek Zimmer',
-			date: ' | JUL 25, 2018',
+			date: 'JUL 25, 2018',
 			link: [
 							'Governments',
 							'Networking',
@@ -19,7 +19,7 @@
 			img: 'post_item/item2.jpg',
 			title: 'How to get cheaper flights using a VPN',
 			name: 'Jayson',
-			date: ' |  JUL 24, 2018',
+			date: 'JUL 24, 2018',
 			link: [
 							'Guides'
 						],
@@ -29,7 +29,7 @@
 			img: 'post_item/item3.jpg',
 			title: 'Net Neutrality was repealed, but the fight is far from over',
 			name: 'Chris Miller',
-			date: ' |  JUL 22, 2018',
+			date: 'JUL 22, 2018',
 			link: [
 							'Governments',
 							'Net Neutrality' ,
@@ -41,7 +41,7 @@
 			img: 'post_item/item1.jpg',
 			title: 'The Internet Cannot be Trusted – Beamsplitters, Backdoors, and Broken Promises',
 			name: 'Derek Zimmer',
-			date: ' |  JUL 25, 2018',
+			date: 'JUL 25, 2018',
 			link: [
 							'Governments',
 							'Networking',
@@ -55,7 +55,7 @@
 			img: 'post_item/item2.jpg',
 			title: 'How to get cheaper flights using a VPN',
 			name: 'Jayson',
-			date: ' |  JUL 24, 2018',
+			date: 'JUL 24, 2018',
 			link: [
 							'Guides'
 						],
@@ -65,7 +65,7 @@
 			img: 'post_item/item3.jpg',
 			title: 'Net Neutrality was repealed, but the fight is far from over',
 			name: 'Chris Miller',
-			date: ' |  JUL 22, 2018',
+			date: 'JUL 22, 2018',
 			link: [
 							'Governments',
 							'Net Neutrality' ,
@@ -89,12 +89,12 @@ mixin post_card(data)
 				a.post_card__title(href="#")= data.title
 				.post_card__user
 					a.post_card__user_name(href="#")= data.name
-					span.post_card__user_date.post_card__user_date--color= data.date
+					span.post_card__user_date= data.date
 				ul.post_card__list
 					each links in data.link
 						li.post_card__list_item
 							a.post_card__list_link(href="#")= links
-				a.post_card__comment(href="#" comment)
+				a.post_card__comment(href="#")
 					span.post_card__comment_number= data.comment
 					span.post_card__comment_icon
 						+icon( 'comment', 'icon--size_mod')
