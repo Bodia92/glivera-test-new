@@ -1,9 +1,8 @@
 //---------------------------------------------sections
 .section {
 	position: relative;
-	padding: 0 1.5rem;
 	width: 100%;
-
+	padding: 0 var(--gl-indent);
 	font-size: 1rem;
 
 	//remove this demo style
@@ -21,15 +20,11 @@
 }
 
 .section_in {
-	max-width: $page_width;
+	max-width: $point_1;
 	width: 100%;
 	margin: 0 auto;
 }
 
-.index_page__container {
-	max-width: $point_1;
-	margin: 0 auto;
-}
 //=================Головний блок====
 
 .post {
