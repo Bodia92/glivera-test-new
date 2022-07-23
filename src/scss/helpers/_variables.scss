@@ -6,11 +6,12 @@ $font_size_base: 1.6rem;
 
 //---------------------------------------------colors
 $white: #fff;
-$black: #22252e;
+$black: #000;
+$black_main: #22252e;
 $green: #4cb649;
 $grey: #323642;
 
-$color_text_base: $black;
+$color_text_base: $black_main;
 $color_link_base: $green;
 $body_bg: $white;
 $header_bg: #f7f7f7;
@@ -51,6 +52,6 @@ $input_font_size: 1.8rem;
 $input_border_color: #d7d8d9;
 $input_border_color_active: $black;
 $input_placeholder_color: rgba(34, 37, 46, 0.8);
-$input_text_color: $black;
+$input_text_color: $black_main;
 $input_radius: $gl_radius;
 //---------------------------------------------forms###

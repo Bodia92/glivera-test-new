@@ -7,11 +7,11 @@
 			name: 'Derek Zimmer',
 			date: 'JUL 25, 2018',
 			link: [
-							'Governments',
-							'Networking',
-							'Open Source',
-							'Privacy',
-							'Security'
+				'Governments',
+				'Networking',
+				'Open Source',
+				'Privacy',
+				'Security'
 						],
 			comment: '0',
 		},
@@ -21,7 +21,7 @@
 			name: 'Jayson',
 			date: 'JUL 24, 2018',
 			link: [
-							'Guides'
+				'Guides'
 						],
 			comment: '0',
 		},
@@ -31,9 +31,9 @@
 			name: 'Chris Miller',
 			date: 'JUL 22, 2018',
 			link: [
-							'Governments',
-							'Net Neutrality' ,
-							'News'
+				'Governments',
+				'Net Neutrality' ,
+				'News'
 						],
 			comment: '0',
 		},
@@ -43,11 +43,11 @@
 			name: 'Derek Zimmer',
 			date: 'JUL 25, 2018',
 			link: [
-							'Governments',
-							'Networking',
-							'Open Source',
-							'Privacy',
-							'Security'
+				'Governments',
+				'Networking',
+				'Open Source',
+				'Privacy',
+				'Security'
 						],
 			comment: '0',
 		},
@@ -57,7 +57,7 @@
 			name: 'Jayson',
 			date: 'JUL 24, 2018',
 			link: [
-							'Guides'
+				'Guides'
 						],
 			comment: '0',
 		},
@@ -67,9 +67,9 @@
 			name: 'Chris Miller',
 			date: 'JUL 22, 2018',
 			link: [
-							'Governments',
-							'Net Neutrality' ,
-							'News'
+				'Governments',
+				'Net Neutrality' ,
+				'News'
 						],
 			comment: '0',
 		}
@@ -78,23 +78,23 @@
 
 mixin post_card(data)
 	.post_card
-			a.post_card__image(href="#")
-				+picture({
-					img: data.img,
-					class: 'post_card__image_in',
-					img_class: 'post_card__image_img',
-					alt: 'Item image',
-				})
-			.post_card__wrapper
-				a.post_card__title(href="#")= data.title
-				.post_card__user
-					a.post_card__user_name(href="#")= data.name
-					span.post_card__user_date= data.date
-				ul.post_card__list
-					each links in data.link
-						li.post_card__list_item
-							a.post_card__list_link(href="#")= links
-				a.post_card__comment(href="#")
-					span.post_card__comment_number= data.comment
-					span.post_card__comment_icon
-						+icon( 'comment', 'icon--size_mod')
+		a.post_card__image(href="#")
+			+picture({
+				img: data.img,
+				class: 'post_card__image_in',
+				img_class: 'post_card__image_img',
+				alt: 'Item image',
+			})
+		.post_card__wrapper
+			a.post_card__title(href="#")= data.title
+			.post_card__user
+				a.post_card__user_name(href="#")= data.name
+				span.post_card__user_date= data.date
+			ul.post_card__list
+				each links in data.link
+					li.post_card__list_item
+						a.post_card__list_link(href="#")= links
+			a.post_card__comment(href="#")
+				span.post_card__comment_number= data.comment
+				span.post_card__comment_icon
+					+icon( 'comment', 'icon--size_mod')

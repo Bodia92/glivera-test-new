@@ -5,8 +5,7 @@
 }
 
 .posts_list__body {
-	display: flex;
-	align-items: center;
+	@extend %global_flex_block_row_nowrap_flex-start_center;
 	margin: 0 0 0 5px;
 	&:not(:last-child) {
 		margin-bottom: 3.6rem;
@@ -14,8 +13,7 @@
 }
 
 .posts_list__heading {
-	display: flex;
-	align-items: center;
+	@extend %global_flex_block_row_nowrap_flex-start_center;
 	margin: 0 3rem 0 0;
 }
 
@@ -30,7 +28,7 @@
 	font-size: 2.4rem;
 	font-weight: 300;
 	line-height: 1.42;
-	color: #22252e;
+	color: $black_main;
 }
 
 .posts_list__item {
@@ -40,24 +38,28 @@
 }
 
 .posts_list__link {
-	display: flex;
-	column-gap: 5px;
+	@extend %global_flex_block_row_nowrap_flex-start;
 	font-size: 1.4rem;
 	line-height: 1.57;
-	color: #323642;
+	color: $black_main;
 	transition: color 0.3s ease 0s;
 	&::before {
 		content: "";
-		flex: 0 0 4px;
+		flex-shrink: 0;
 		width: 4px;
 		height: 4px;
-		margin: 8px 0 0 0;
+		margin: 0.8rem 0.5rem 0 0;
 		border-radius: 50%;
 		background-color: $color_link_base;
+		transition: background-color 0.3s ease, transform 0.3s ease;
 	}
 	@media (any-hover: hover) {
 		&:hover {
 			color: $green;
+			&::before {
+				background-color: $grey;
+				transform: scale(1.3);
+			}
 		}
 	}
 }
