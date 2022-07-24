@@ -5,18 +5,3 @@
 .form_input__element {
 	@extend %form_el_default;
 }
-//=====post form======================
-
-.post__form {
-	position: relative;
-	margin: 0 0 5.4rem 0;
-}
-.post__form_submit {
-	position: absolute;
-	width: 2.5rem;
-	height: 2.5rem;
-	top: 50%;
-	left: 2rem;
-	transform: translate(0, -50%);
-	cursor: pointer;
-}
