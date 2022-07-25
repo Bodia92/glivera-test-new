@@ -2,6 +2,7 @@ import { GLOBAL_VARS } from 'utils/constants';
 import { documentReady, pageLoad } from 'utils';
 import postSectionInit from '../components/postSectionInit';
 import postListInit from '../components/postListInit';
+import burgerMenu from '../components/burgerMenu';
 
 export default class IndexPage {
 	constructor() {
@@ -12,6 +13,7 @@ export default class IndexPage {
 		console.log('index page load');
 		postSectionInit();
 		postListInit();
+		burgerMenu();
 	}
 
 	init() {

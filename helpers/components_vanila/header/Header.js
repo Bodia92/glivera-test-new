@@ -65,8 +65,6 @@ class Header {
 
 export default Header;
 
-
-
 // ------------ how init
 // copy past this
 

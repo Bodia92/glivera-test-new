@@ -1,39 +1,65 @@
--
-	linkHeader = [
-		{
-			title:'bitcoin',
-		},
-		{
-			title:'bittorrent',
-		},
-		{
-			title:'irc',
-		},
-		{
-			title:'news',
-		},
-		{
-			title:'privacy',
-		},
-		{
-			title:'programming',
-		},
-		{
-			title:' security',
-		},
-	]
+//- -
+//- 	linkHeader = [
+//- 		{
+//- 			title:'bitcoin',
+//- 		},
+//- 		{
+//- 			title:'bittorrent',
+//- 		},
+//- 		{
+//- 			title:'irc',
+//- 		},
+//- 		{
+//- 			title:'news',
+//- 		},
+//- 		{
+//- 			title:'privacy',
+//- 		},
+//- 		{
+//- 			title:'programming',
+//- 		},
+//- 		{
+//- 			title:' security',
+//- 		},
+//- 	]
+
+//- mixin header
+//- 	header.header
+//- 		.header_in.section_in
+//- 			.header__body
+//- 				.header_tags
+//- 					.header_tags__title TAGS:
+//- 					nav.header_tags__lists
+//- 						ul.header_tags__list
+//- 							each link in linkHeader
+//- 								li.header_tags__item
+//- 									a(href="#").header_tags__link= link.title
+//- 				.header_info
+//- 					each linkHeader in ['team','contact']
+//- 						a.header_info__link(href="#")= linkHeader
 
 mixin header
 	header.header
 		.header_in.section_in
 			.header__body
-				.header_tags
-					.header_tags__title TAGS:
-					nav.header_tags__lists
-						ul.header_tags__list
-							each link in linkHeader
-								li.header_tags__item
-									a(href="#").header_tags__link= link.title
+				.header_main_row
+					.menu_trigger.menuTrigger
+						span.menu_trigger_decor
+					h1.logo_wrap
+						a(href="#").logo_text TAGS:
+					nav.header_menu
+						+menu({
+							gl_class: 'header_menu',
+							items: [
+								{title: 'bitcoin', url: '#', active: false},
+								{title: 'bittorrent', url: '#', active: false},
+								{title: 'irc', url: '#', active: false},
+								{title: 'news', url: '#', active: false},
+								{title: 'privacy', url: '#', active: false},
+								{title: 'programming', url: '#', active: false},
+								{title: 'security', url: '#', active: false}
+							]
+						})
 				.header_info
 					each linkHeader in ['team','contact']
 						a.header_info__link(href="#")= linkHeader
