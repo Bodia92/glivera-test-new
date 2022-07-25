@@ -90,10 +90,11 @@ mixin post_card(data)
 			.post_card__user
 				a.post_card__user_name(href="#")= data.name
 				span.post_card__user_date= data.date
-			ul.post_card__list
-				each links in data.link
-					li.post_card__list_item
-						a.post_card__list_link(href="#")= links
+			.post_card_body
+				ul.post_card__list
+					each links in data.link
+						li.post_card__list_item
+							a.post_card__list_link(href="#")= links
 			a.post_card__comment(href="#")
 				span.post_card__comment_number= data.comment
 				span.post_card__comment_icon

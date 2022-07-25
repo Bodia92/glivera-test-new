@@ -1,9 +1,10 @@
 @import "ScssHelpers/helpers_all";
 
 .post_card {
-	transition: box-shadow 0.3s ease 0s;
 	@extend %global_flex_block_row_nowrap_flex-start;
+
 	padding: 0 0 3rem 0;
+	transition: box-shadow 0.3s ease 0s;
 	@include bp($point_3) {
 		display: block;
 		padding: 0;
@@ -72,21 +73,21 @@
 }
 //=========post card list
 .post_card_body {
-}
-
-.post_card__list {
-	@extend %global_flex_block_row_wrap_flex-start_center;
 	&:not(:last-child) {
 		margin-bottom: 1.8rem;
 	}
 }
+
+.post_card__list {
+	@extend %global_flex_block_row_wrap_flex-start_center;
+
+	margin: 0 -1rem -1rem 0;
+}
 .post_card__list_item {
-	&:not(:last-child) {
-		padding: 0 1rem 0 0;
-		&::after {
-			content: ",";
-			color: $green;
-		}
+	padding: 0 1rem 1rem 0;
+	&::after {
+		content: ",";
+		color: $green;
 	}
 }
 .post_card__list_link {
