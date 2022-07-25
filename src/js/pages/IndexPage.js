@@ -1,5 +1,7 @@
 import { GLOBAL_VARS } from 'utils/constants';
 import { documentReady, pageLoad } from 'utils';
+import postSectionInit from '../components/postSectionInit';
+import postListInit from '../components/postListInit';
 
 export default class IndexPage {
 	constructor() {
@@ -8,6 +10,8 @@ export default class IndexPage {
 
 	loadFunc() {
 		console.log('index page load');
+		postSectionInit();
+		postListInit();
 	}
 
 	init() {
