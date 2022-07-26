@@ -1,18 +1,24 @@
 //=================Головний блок====
 
-.post {
-}
-
 .post__main {
 	@extend %global_flex_block_row_nowrap_flex-start;
+
 	padding-top: 4rem;
-	@include bp($point_3, min) {
+	@include bp($point_3) {
+		display: block;
 	}
 }
 
 .post__content {
-	&:not(:last-child) {
-		padding: 0 6rem 0 0;
+	@include bp($point_3, min) {
+		&:not(:last-child) {
+			padding: 0 6rem 0 0;
+		}
+	}
+	@include bp($point_3) {
+		&:not(:last-child) {
+			margin: 0 0 4rem 0;
+		}
 	}
 }
 
@@ -40,7 +46,7 @@
 		bottom: 0;
 		left: 0;
 		background-color: #ebeced;
-		transition: height 0.3s ease, background-color 0.3s ease;
+		transition: height .3s ease, background-color .3s ease;
 	}
 	&:not(:last-child) {
 		margin: 0 0 2rem 0;

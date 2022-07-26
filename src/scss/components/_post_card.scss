@@ -4,7 +4,7 @@
 	@extend %global_flex_block_row_nowrap_flex-start;
 
 	padding: 0 0 3rem 0;
-	transition: box-shadow 0.3s ease 0s;
+	transition: box-shadow .3s ease;
 	@include bp($point_3) {
 		display: block;
 		padding: 0;
@@ -39,7 +39,7 @@
 	font-weight: 300;
 	line-height: 1.42;
 	color: $color_text_base;
-	transition: color 0.3s ease;
+	transition: color .3s ease;
 	&:not(:last-child) {
 		margin-bottom: 1rem;
 	}
@@ -60,7 +60,7 @@
 .post_card__user_name {
 	color: $grey;
 	&:not(:last-child) {
-		margin: 0 0.6rem 1.2rem 0;
+		margin: 0 .6rem 1.2rem 0;
 	}
 }
 
@@ -68,7 +68,7 @@
 	color: #889099;
 	&::before {
 		content: "|";
-		padding: 0 0.4rem 0 0;
+		padding: 0 .4rem 0 0;
 	}
 }
 //=========post card list
@@ -93,9 +93,9 @@
 .post_card__list_link {
 	font-size: 1.2rem;
 	line-height: 1.33;
-	letter-spacing: 0.1em;
+	letter-spacing: .1em;
 	text-transform: uppercase;
-	transition: color 0.3s ease, text-shadow 0.3s ease;
+	transition: color .3s ease, text-shadow .3s ease;
 
 	@media (any-hover: hover) {
 		&:hover {
