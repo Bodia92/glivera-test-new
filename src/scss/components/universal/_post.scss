@@ -12,12 +12,12 @@
 .post__content {
 	@include bp($point_3, min) {
 		&:not(:last-child) {
-			padding: 0 6rem 0 0;
+			padding-right: 6rem;
 		}
 	}
 	@include bp($point_3) {
 		&:not(:last-child) {
-			margin: 0 0 4rem 0;
+			margin-bottom: 4rem;
 		}
 	}
 }
@@ -31,11 +31,13 @@
 		margin-bottom: 4rem;
 	}
 }
+
 .post__list {
 	&:not(:last-child) {
 		margin-bottom: 4rem;
 	}
 }
+
 .post__list_item {
 	position: relative;
 	&::before {
@@ -49,7 +51,7 @@
 		transition: height .3s ease, background-color .3s ease;
 	}
 	&:not(:last-child) {
-		margin: 0 0 2rem 0;
+		margin-bottom: 2rem;
 	}
 	@media (any-hover: hover) {
 		&:hover {
@@ -64,18 +66,20 @@
 
 //=======block post__sidebar
 .post__sidebar {
-	@media (min-width: $point_3) {
+	@include bp($point_3) {
 		width: 40rem;
 		flex-shrink: 0;
-		padding: 0 0 0 6rem;
+		padding-left: 6rem;
 		border-left: 1px solid #ebeced;
 	}
 }
+
 .blog__banner {
 	&:not(:last-child) {
 		margin-bottom: 5.2rem;
 	}
 }
+
 .post__tags_title {
 	font-size: 2.4rem;
 	font-weight: 300;
@@ -100,8 +104,9 @@
 
 .post__form {
 	position: relative;
-	margin: 0 0 5.4rem 0;
+	margin-bottom: 5.4rem;
 }
+
 .post__form_submit {
 	position: absolute;
 	width: 2.5rem;

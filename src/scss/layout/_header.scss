@@ -67,9 +67,9 @@
 		height: 100%;
 		width: 100%;
 		flex: 0 0 auto;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+
+		@include flex_block(column, nowrap, center, center);
+
 		padding: var(--height-header) var(--gl-indent);
 		margin: auto;
 	}
@@ -113,6 +113,7 @@
 //---------------------------------------------logo
 .logo_wrap {
 	&:not(:last-child) {
+		margin-right: 4rem;
 		margin: 0 4rem 0 0;
 	}
 	@include bp($point_3) {
@@ -207,7 +208,7 @@
 	color: $grey;
 	text-transform: uppercase;
 	&:not(:last-child) {
-		margin: 0 4rem 0 0;
+		margin-right: 4rem;
 	}
 	&:hover {
 		color: darken(darkgray, 10%);

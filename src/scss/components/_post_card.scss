@@ -3,7 +3,7 @@
 .post_card {
 	@extend %global_flex_block_row_nowrap_flex-start;
 
-	padding: 0 0 3rem 0;
+	padding-bottom: 3rem;
 	transition: box-shadow .3s ease;
 	@include bp($point_3) {
 		display: block;
@@ -13,13 +13,14 @@
 
 .post_card__image {
 	width: 28rem;
+	height: 18rem;
 	flex-shrink: 0;
 	@include bp($point_2, min) {
-		margin: 0 4rem 0 0;
+		margin-right: 4rem;
 	}
 	@include bp($point_3) {
 		&:not(:last-child) {
-			margin: 0 0 1.6rem 0;
+			margin-bottom: 1.6rem;
 		}
 	}
 }
@@ -45,11 +46,12 @@
 	}
 	@media (any-hover: hover) {
 		&:hover {
-			color: $color_link_base;
+			color: darken(darkgray, 10%);
 			text-decoration: none;
 		}
 	}
 }
+
 .post_card__user {
 	font-size: 1.4rem;
 	line-height: 1.57;
@@ -57,10 +59,16 @@
 		margin-bottom: 1rem;
 	}
 }
+
 .post_card__user_name {
 	color: $grey;
 	&:not(:last-child) {
 		margin: 0 .6rem 1.2rem 0;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			color: darken(darkgray, 10%);
+		}
 	}
 }
 
@@ -68,7 +76,7 @@
 	color: #889099;
 	&::before {
 		content: "|";
-		padding: 0 .4rem 0 0;
+		padding-right: .4rem;
 	}
 }
 //=========post card list
@@ -83,6 +91,7 @@
 
 	margin: 0 -1rem -1rem 0;
 }
+
 .post_card__list_item {
 	padding: 0 1rem 1rem 0;
 	&::after {
@@ -90,29 +99,31 @@
 		color: $green;
 	}
 }
+
 .post_card__list_link {
 	font-size: 1.2rem;
 	line-height: 1.33;
 	letter-spacing: .1em;
 	text-transform: uppercase;
-	transition: color .3s ease, text-shadow .3s ease;
+	transition: color .3s ease;
 
 	@media (any-hover: hover) {
 		&:hover {
-			color: #11390f;
-			text-shadow: 0px 1px #11390f;
+			color: darken(darkgray, 10%);
 		}
 	}
 }
+
 .post_card__comment {
 	@extend %global_flex_block_row_nowrap_flex-start_center;
 }
+
 .post_card__comment_number {
 	font-size: 1.4rem;
 	line-height: 1.57;
 	color: #889099;
 	&:not(:last-child) {
-		margin: 0 5px 0 0;
+		margin-right: 5px;
 	}
 }
 
