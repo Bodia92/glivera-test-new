@@ -1,9 +1,7 @@
 //=================Головний блок====
-
 .post__main {
 	@extend %global_flex_block_row_nowrap_flex-start;
 
-	padding-top: 4rem;
 	@include bp($point_3) {
 		display: block;
 	}

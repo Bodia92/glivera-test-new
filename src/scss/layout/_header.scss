@@ -3,7 +3,7 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	padding: 4rem var(--gl-indent) 0;
+
 	height: 10rem;
 	width: 100%;
 
@@ -13,6 +13,13 @@
 	will-change: transform;
 
 	@include z-index(header);
+}
+
+.header_in {
+	padding-top: 4rem;
+	@include bp($point_1) {
+		padding: 4rem var(--gl-indent) 0;
+	}
 }
 
 .header__body {
@@ -28,7 +35,7 @@
 }
 
 .header_main_row {
-	@extend %global_flex_block_row_wrap_flex-start_center;
+	@extend %global_flex_block_row_nowrap_flex-start_center;
 
 	flex: 1 1 auto;
 	&:not(:last-child) {
@@ -50,18 +57,18 @@
 		overflow-x: hidden;
 		overflow-y: auto;
 		background: lightgoldenrodyellow;
-		transform: translate(0, -100%);
+		transform: translate(-100%, 0);
 
 		@include flex_block(row, wrap, center, center);
 
-		body.menu_open & {
+		body.body--open_menu_state & {
 			transform: translate(0, 0);
 		}
 	}
 }
 
 .header_menu__list {
-	@extend %global_flex_block_row_nowrap_flex-start_center;
+	@extend %global_flex_block_row_wrap_flex-start_center;
 
 	@include bp($point_3) {
 		height: 100%;
@@ -103,7 +110,7 @@
 			text-decoration: none;
 		}
 	}
-	body.menu_open & {
+	body.body--open_menu_state & {
 		font-size: 2rem;
 	}
 }
@@ -112,6 +119,7 @@
 
 //---------------------------------------------logo
 .logo_wrap {
+	align-self: start;
 	&:not(:last-child) {
 		margin-right: 4rem;
 		margin: 0 4rem 0 0;
@@ -192,7 +200,7 @@
 
 	.active_mod & {
 		opacity: 0;
-		transform: translate(100%, 0);
+		transform: translate(-100%, 0);
 	}
 
 	@include user_menu_butt_line;
@@ -215,3 +223,8 @@
 	}
 }
 //---------------------------------------------user info###
+
+
+.body--open_menu_state{
+	overflow: hidden;
+}
