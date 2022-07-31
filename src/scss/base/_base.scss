@@ -36,6 +36,10 @@ body {
 	@supports (display: grid) {
 		display: block;
 	}
+
+	&.body--open_menu_state {
+		overflow: hidden;
+	}
 }
 
 .wrapper {

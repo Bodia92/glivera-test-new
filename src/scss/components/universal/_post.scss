@@ -64,7 +64,7 @@
 
 //=======block post__sidebar
 .post__sidebar {
-	@include bp($point_3) {
+	@include bp($point_3, min) {
 		width: 40rem;
 		flex-shrink: 0;
 		padding-left: 6rem;
